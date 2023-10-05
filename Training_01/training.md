@@ -1,4 +1,4 @@
-[PDF](./pic/Complete_Tag2.pdf)
+[PDF](https://drive.google.com/file/d/1XPIfnME3s95g4dAQ6ZyOeJShujean03q/view?usp=drive_link)
 <center><font size="5"><strong>Table of Content</strong></font></center>
 
 
