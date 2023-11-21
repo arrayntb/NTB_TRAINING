@@ -34,5 +34,5 @@
 | :--------------: | :------------: |
 | Document Version |      1.0       |
 |  NTB Firmware    |                |
-|   Created Date   |   10/20/2023   |
+|   Created Date   |   11/21/2023   |
 |      Author      | 林鑫宏 Jack Lin|

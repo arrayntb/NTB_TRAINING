@@ -1,3 +1,4 @@
+[PDF](https://drive.google.com/file/d/1hzA-XH0U7FZxPFe8bjIiI0OH4d_Njs6w/view?usp=sharing)
 <center><font size="5"><strong>Table of Content</strong></font></center>
 
 
@@ -56,7 +57,7 @@ For comprehensive documentation and detailed guidance on how to utilize each ele
 # Training Case
 ## Case A
 
-<center><img src="./pic/Case A Network Topology.svg" width="70%"/></center>
+<center><img src="./pic/Case A Network Topology.svg" width="120%"/></center>
 
 In Case A, our objective is to offload SSL interception for multiple links, as depicted in Figure 4. To initiate this process, we must capture all HTTPS traffic, achieved by filtering all traffic destined for TCP port 443. It's important to note that this traffic can originate from either port 0 or port 1. After undergoing SSL interception, it's crucial to keep these traffic streams separate. Traffic from port 0 should exit via port 7, while traffic from port 1 should exit through port 6. To achieve this separation, we add a VLAN 100 tag to all traffic from port 0 before SSL interception, and remove it afterward. Similarly, for port 1 traffic, we use a VLAN 200 tag. These VLAN tags enable us to employ filters for the separation of port 0 and port 1 traffic.
 
@@ -131,7 +132,9 @@ Base on above criteria we are create the following <filter> and <output> element
 <div style="page-break-before:always"></div>
 ### Case A Apply Chain Element from client to internet
 
-<center><img src="./pic/Case_A_Apply_Chain_Element_Internet.png" width="70%"/></center>
+<center><img src="./pic/Case_A_Apply_Chain_Element_Internet_1.svg" width="70%"/></center>
+<center><img src="./pic/Case_A_Apply_Chain_Element_Internet_2.svg" width="70%"/></center>
+<center><img src="./pic/Case_A_Apply_Chain_Element_Internet_3.svg" width="70%"/></center>
 
 After the <filter> and <output> element was created, we will start create <chain> element from client to internet.  
 
@@ -171,7 +174,9 @@ After the <filter> and <output> element was created, we will start create <chain
 <div style="page-break-before:always"></div>
 ### Case A Apply Chain Element from internet to client
 
-<center><img src="./pic/Case_A_Apply_Chain_Element_Internettoclient.png" width="70%"/></center>
+<center><img src="./pic/Case_A_Apply_Chain_Element_Internettoclient_1.svg" width="70%"/></center>
+<center><img src="./pic/Case_A_Apply_Chain_Element_Internettoclient_2.svg" width="70%"/></center>
+<center><img src="./pic/Case_A_Apply_Chain_Element_Internettoclient_3.svg" width="70%"/></center>
 
 Next, we will create the <chain> element for traffic from the internet to the client, as illustrated in Figure 6.
 
@@ -484,9 +489,11 @@ Base on above criteria we are create the following <filter> and <output> element
 <div style="page-break-before:always"></div>
 ### Case B Apply Chain Element from client to internet
 
-<center><img src="./pic/Case_B_Apply_Chain_Element_Internet.png" width="70%"/></center>
+<center><img src="./pic/Case_B_Apply_Chain_Element_Internet_1.svg" width="70%"/></center>
+<center><img src="./pic/Case_B_Apply_Chain_Element_Internet_2.svg" width="70%"/></center>
+<center><img src="./pic/Case_B_Apply_Chain_Element_Internet_3.svg" width="70%"/></center>
 
-After the <filter> and <output> element was created, we will start create <chain> element from client to internet as illustrate in figure 8.  
+After the <filter> and <output> element was created, we will start create <chain> element from client to internet as illustrate in figure 8-1 to 8-3.  
 
 ``````XML
 <!-- Packet forward -->
@@ -549,9 +556,11 @@ After the <filter> and <output> element was created, we will start create <chain
 <div style="page-break-before:always"></div>
 ### Case B Apply Chain Element from internet to client
 
-<center><img src="./pic/Case_B_Apply_Chain_Element_Internettoclient.png" width="70%"/></center>
+<center><img src="./pic/Case_B_Apply_Chain_Element_Internettoclient_1.svg" width="70%"/></center>
+<center><img src="./pic/Case_B_Apply_Chain_Element_Internettoclient_2.svg" width="70%"/></center>
+<center><img src="./pic/Case_B_Apply_Chain_Element_Internettoclient_3.svg" width="70%"/></center>
 
-Next, we will create the <chain> element for traffic from the internet to the client, as illustrated in Figure 9.
+Next, we will create the <chain> element for traffic from the internet to the client, as illustrated in Figure 9-1 to 9-3.
 
 ``````XML
 <!-- Packet return -->
@@ -611,7 +620,7 @@ Next, we will create the <chain> element for traffic from the internet to the cl
 
 
 ``````
-
+<div style="page-break-before:always"></div>
 ### Case B Complete Combine Script
 
 The complete XML script .
